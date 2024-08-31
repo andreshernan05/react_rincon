@@ -1,19 +1,12 @@
+import { Link } from 'react-router-dom';
 import './ButtonComponent.css';
 
-export default function ButtonComponent ({nombre}){
+export default function ButtonComponent({ nombre }) {
+    const route = nombre === "Inicio" ? "/" : `/category/${nombre.toLowerCase().trim()}`;
 
-    const handleClick = () => {
-        alert( `Prueba del boton ${nombre}`)
-    }
-
-    return(<>
-    <div>
-    <button className="btn btn-primary btn-custom btn-estilos" onClick={handleClick}>
-        {nombre}
-    </button>
-    </div>
-
-    
-    
-    </>)
+    return (
+        <Link to={route} className="btn btn-dark btn-estilos">
+            {nombre}
+        </Link>
+    );
 }
