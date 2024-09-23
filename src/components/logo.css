@@ -1,4 +1,9 @@
-.estilo_logo{
-    height: 50px;
-    width: auto;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.estilo_logo {
+  width: 100px;
+  height: 50px;
 }

@@ -1,19 +1,19 @@
-.carrito_estilo{
-    display: flex;
-    align-items: center;
-
-    .imgCarrito{
-        height: 30px;
-        width: auto;
-    }
-    
-    .sp_contador{
-        margin-left: 5px;
-        background-color: red;
-        color: white;
-        border-radius: 50%;
-        padding: 2px 8px;
-        font-size: 12px;
-    }
+.carrito_estilo {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
+.imgCarrito {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.sp_contador {
+  background-color: #f4c542;
+  color: #333333;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  font-size: 0.875rem;
+}

@@ -10,7 +10,7 @@ export default function Cards({ title, price, image, idProd }) {
                 <figcaption className="card-body">
                     <h4 className='card-title h1'>{title}</h4>
                     <p className='card-text price h3'>${price}</p>
-                    <button className="btn btn-success">
+                    <button className="btn btn-cards">
                         <Link to={`/item/${idProd}`} ></Link>Ver Detalles
                     </button>
 

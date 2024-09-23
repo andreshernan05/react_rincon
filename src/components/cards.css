@@ -1,7 +1,7 @@
 .card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    background: linear-gradient(270deg, rgba(255, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.51) 50%, rgba(28, 0, 255, 0.59) 80%);
+    background: linear-gradient(270deg, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 139, 0.5) 50%, rgba(0, 0, 255, 0.6) 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     max-width: 250px;
@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .card-title {
@@ -40,18 +41,25 @@
 
 .card-text .price {
     font-weight: bold;
-    color: #ffd700;
+    color: #f0f8ff;
 }
 
-.btn-success {
+.btn-cards {
     display: block;
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     text-decoration: none;
     margin-top: auto;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cards:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }

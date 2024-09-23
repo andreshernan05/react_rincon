@@ -13,7 +13,6 @@ h3 {
 
 .tarjeta {
     margin-top: 50px;
-    /* Espacio entre el navbar y el componente */
     display: flex;
     justify-content: center;
 }
@@ -62,10 +61,8 @@ h3 {
 .div__row {
     display: flex;
     justify-content: center;
-    /* Centra los elementos en la fila */
     margin-top: 10px;
     gap: 20px;
-    /* Espacio entre los elementos en la fila */
 }
 
 .div__precio {

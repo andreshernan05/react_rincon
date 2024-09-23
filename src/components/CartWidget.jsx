@@ -1,11 +1,30 @@
-import './CartWidget.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
+import Swal from 'sweetalert2';
+import './CartWidget.css';
 
 export default function CartWidget() {
-    return (<>
-        <div className="d-flex align-items-center ms-auto carrito_estilo ">
-            <img className="input-group imgCarrito " src="/carrito.png" alt="Carrito de Compras" />
-            <span className="input-group-text sp_contador">5</span>
-        </div>
+    const { cart, getItemCount } = useCart();
 
-    </>)
+    const handleCartClick = (e) => {
+        if (cart.length === 0) {
+            e.preventDefault();
+            Swal.fire({
+                title: 'Carrito vacío',
+                text: 'No hay productos en tu carrito',
+                icon: 'info',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    };
+
+    return (
+        <Link to="/checkout" className="carrito_estilo" onClick={handleCartClick}>
+            <img className="input-group imgCarrito" src="/carrito.png" alt="Carrito de Compras" />
+            {getItemCount() > 0 && (
+                <span className="input-group-text sp_contador">{getItemCount()}</span>
+            )}
+        </Link>
+    );
 }
