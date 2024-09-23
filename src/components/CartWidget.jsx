@@ -21,7 +21,7 @@ export default function CartWidget() {
 
     return (
         <Link to="/checkout" className="carrito_estilo" onClick={handleCartClick}>
-            <img className="input-group imgCarrito" src="/carrito.png" alt="Carrito de Compras" />
+            <img className="input-group imgCarrito" src="https://firebasestorage.googleapis.com/v0/b/rincon-coleccionista.appspot.com/o/carrito.png?alt=media&token=0dfa9303-75d7-4ba3-af08-8fe3811d5c7e" alt="Carrito de Compras" />
             {getItemCount() > 0 && (
                 <span className="input-group-text sp_contador">{getItemCount()}</span>
             )}
